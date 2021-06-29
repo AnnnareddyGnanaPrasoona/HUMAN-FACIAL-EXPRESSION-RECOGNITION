@@ -13,6 +13,7 @@ Convolutional Neural Networks achieve better accuracy with big data. However, th
 
 ### ARCHITECTURE OF CONVOLUTION NEURAL NETWORK :
 
+
 ![image](https://user-images.githubusercontent.com/85671826/123841528-4b005200-d92d-11eb-876c-5c71c8b8ab2e.png)
 
 **1. Convolutional Layer**
