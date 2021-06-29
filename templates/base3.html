@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gesture Recognition System</title>
+    <link href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet"> 
+	<style>
+	.bg-dark {
+		background-color: #42678c!important;
+	}
+	#result {
+		color: #0a1c4ed1;
+	}
+	</style>
+
+
+</head>
+
+
+<body style="background-color:black">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" >HUMAN FACIAL EXPRESSION RECOGNITION  Using CNN</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="content" style="margin-top:2em; margin-bottom:2em">
+		<div class="container">
+		  <div class="row">
+			<div class="col-sm-6 bd" >
+			  <h3 style="color:white">HUMAN FACIAL EXPRESSION RECOGNITION </h3>
+			  <br>
+			  <p style="color:white">Emotions are biological states associated with the nervous system brought on by neurophysiological changes variously associated with thoughts, feelings, behavioural responses, and a degree of pleasure or displeasure.</p>
+				<img src="https://thumbs.dreamstime.com/z/smileys-vector-set-smiley-face-yellow-emoticons-facial-expressions-emotions-like-happy-shouting-confused-shocked-95703265.jpg" alt="image" width="100%" height="350">    
+			</div>
+			<div class="col-sm-6">
+				<div>
+					<h4 style="color:white">Please upload an human face image</h4>
+			<form action = "http://localhost:5000/predict" id="upload-file" method="post" enctype="multipart/form-data">
+				<label for="imageUpload" class="upload-label">
+					Choose...
+				</label>
+				<input type="file" name="image" id="imageUpload" accept=".png, .jpg, .jpeg">
+			</form>
+			
+
+			<div class="image-section" style="display:none;">
+				<div class="img-preview">
+					<div id="imagePreview">
+					</div>
+				</div>
+				<div>
+					<button type="button" class="btn btn-info btn-lg " id="btn-predict" style="color:white">Click here to see what emotion it is!</button>
+				</div>
+			</div>
+
+			<div class="loader" style="display:none;"></div>
+
+			<h3>
+				<span id="result" style="color:white "> </span>
+			</h3>
+
+		</div>
+			</div>
+			 
+		  </div>
+		</div>
+		</div>
+    </div>
+</body>
+
+<footer>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>    
+</footer>
+
+</html>
